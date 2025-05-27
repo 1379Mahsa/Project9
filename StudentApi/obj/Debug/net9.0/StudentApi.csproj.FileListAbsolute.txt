@@ -54,3 +54,4 @@ C:\Users\Z\Desktop\Project9\StudentApi\obj\Debug\net9.0\refint\StudentApi.dll
 C:\Users\Z\Desktop\Project9\StudentApi\obj\Debug\net9.0\StudentApi.pdb
 C:\Users\Z\Desktop\Project9\StudentApi\obj\Debug\net9.0\StudentApi.genruntimeconfig.cache
 C:\Users\Z\Desktop\Project9\StudentApi\obj\Debug\net9.0\ref\StudentApi.dll
+C:\Users\Z\Desktop\Project9\StudentApi\obj\Debug\net9.0\StudentApi.sourcelink.json
