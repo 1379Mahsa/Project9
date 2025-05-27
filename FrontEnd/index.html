@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <title>مدیریت دانشجو</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css');
+
+        body {
+            font-family: 'Vazir', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            margin: 0;
+            padding: 25px;
+            direction: rtl;
+            color: #2c3e50;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            font-size: 2.8rem;
+            letter-spacing: 1.2px;
+            text-shadow: 1px 1px 3px rgba(255 255 255 / 0.8);
+        }
+
+        table {
+            width: 700px;
+            max-width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+            background: transparent;
+        }
+
+        thead tr th {
+            background-color: #34495e;
+            color: #ecf0f1;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 12px 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        tbody tr {
+            background-color: white;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        tbody tr:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        tbody tr td {
+            padding: 15px 25px;
+            text-align: center;
+            font-size: 1.1rem;
+            vertical-align: middle;
+        }
+
+        tbody tr td:last-child {
+            padding-right: 0;
+        }
+
+        button {
+            font-family: 'Vazir', Tahoma, sans-serif;
+            cursor: pointer;
+            border: none;
+            border-radius: 25px;
+            padding: 8px 22px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            user-select: none;
+        }
+
+        #addBtn {
+            margin: 25px 0 10px 0;
+            background: #27ae60;
+            color: white;
+            width: 180px;
+            font-size: 1.25rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 14px rgba(39, 174, 96, 0.45);
+        }
+
+        #addBtn:hover {
+            background: #219150;
+            box-shadow: 0 8px 20px rgba(33, 145, 80, 0.6);
+        }
+
+        #addStudentSection {
+            width: 350px;
+            background: #fff;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-radius: 18px;
+            padding: 25px 30px;
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        #addStudentSection input {
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 1.1rem;
+            border-radius: 12px;
+            border: 2px solid #bdc3c7;
+            transition: border-color 0.25s ease;
+            outline-offset: 2px;
+        }
+
+        #addStudentSection input:focus {
+            border-color: #27ae60;
+            outline: none;
+        }
+
+        #addStudentSection button {
+            width: 100%;
+            padding: 14px 0;
+            font-size: 1.15rem;
+            border-radius: 30px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+        }
+
+        #saveStudentBtn {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        #saveStudentBtn:hover {
+            background-color: #1e874b;
+        }
+
+        #cancelBtn {
+            background-color: #e74c3c;
+            color: white;
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+        }
+
+        #cancelBtn:hover {
+            background-color: #b73229;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            table {
+                width: 100%;
+            }
+            #addStudentSection {
+                width: 90%;
+            }
+            #addBtn {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>مدیریت دانشجو</h2>
+
+    <table id="studentsTable">
+        <thead>
+            <tr>
+                <th>شماره دانشجویی</th>
+                <th>نام دانشجو</th>
+                <th>عملیات</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- رکوردها اینجا اضافه میشن -->
+        </tbody>
+    </table>
+
+    <button id="addBtn">➕ افزودن دانشجو</button>
+
+    <div id="addStudentSection">
+        <input type="text" id="studentIdInput" placeholder="شماره دانشجویی" />
+        <input type="text" id="studentNameInput" placeholder="نام دانشجو" />
+        <button id="saveStudentBtn">ذخیره</button>
+        <button id="cancelBtn">لغو</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
